@@ -1,0 +1,133 @@
+@model PharmacyApp.ViewModels.ProfileVM
+@{
+    ViewData["Title"] = "My Profile";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - PharmacyApp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9fafc;
+            color: #1e293b;
+        }
+        .navbar {
+            background: #667eea;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+            font-weight: 600;
+        }
+        section {
+            padding: 3rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        .profile-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .profile-field {
+            margin-bottom: 1.5rem;
+        }
+        .profile-field label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: .5rem;
+        }
+        .profile-field input {
+            width: 100%;
+            padding: .75rem;
+            border-radius: 8px;
+            border: 1px solid #d1d5db;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            background: #667eea;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-secondary {
+            background: #64748b;
+        }
+        footer {
+            background: #111827;
+            color: #d1d5db;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo"><i class="fas fa-capsules"></i> PharmacyApp</div>
+        <div>
+            <a asp-controller="Order" asp-action="Dashboard"><i class="fas fa-home"></i> Dashboard</a>
+            <a asp-controller="Account" asp-action="Logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Profile Section -->
+    <section>
+        <h2>My Profile</h2>
+        <div class="profile-card">
+            <form asp-action="UpdateProfile" method="post">
+                <div class="profile-field">
+                    <label for="FullName">Full Name</label>
+                    <input asp-for="FullName" id="FullName" />
+                </div>
+                <div class="profile-field">
+                    <label for="Email">Email</label>
+                    <input asp-for="Email" id="Email" type="email" />
+                </div>
+                <div class="profile-field">
+                    <label for="PhoneNumber">Phone Number</label>
+                    <input asp-for="PhoneNumber" id="PhoneNumber" />
+                </div>
+                <div class="profile-field">
+                    <label for="Address">Address</label>
+                    <input asp-for="Address" id="Address" />
+                </div>
+                <div class="profile-field">
+                    <label for="DateOfBirth">Date of Birth</label>
+                    <input asp-for="DateOfBirth" id="DateOfBirth" type="date" />
+                </div>
+                <button type="submit" class="btn">Update Profile</button>
+                <a asp-controller="Dashboard" asp-action="Index" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© @DateTime.Now.Year PharmacyApp. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Pharmacy Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="display-5 fw-bold text-primary">Pharmacy Dashboard</h1>
+        <p class="lead text-muted">Welcome, @User.Identity?.Name 👋</p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Orders Card -->
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-body text-center">
+                    <i class="fas fa-box fa-2x text-primary mb-3"></i>
+                    <h5 class="card-title">Orders</h5>
+                    <p class="card-text text-muted">View and process customer prescriptions.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Manage Orders</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inventory Card -->
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-body text-center">
+                    <i class="fas fa-pills fa-2x text-success mb-3"></i>
+                    <h5 class="card-title">Inventory</h5>
+                    <p class="card-text text-muted">Add, edit, or remove medicines in stock.</p>
+                    <a href="#" class="btn btn-outline-success btn-sm">Manage Inventory</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pharmacy Profile Card -->
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-body text-center">
+                    <i class="fas fa-store fa-2x text-warning mb-3"></i>
+                    <h5 class="card-title">Pharmacy Profile</h5>
+                    <p class="card-text text-muted">Update your pharmacy information.</p>
+                    <a asp-action="Manage" class="btn btn-outline-warning btn-sm">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
