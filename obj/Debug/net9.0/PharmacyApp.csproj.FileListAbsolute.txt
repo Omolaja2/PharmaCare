@@ -195,3 +195,12 @@ C:\Users\USER\Desktop\PharmacyApp\obj\Debug\net9.0\refint\PharmacyApp.dll
 C:\Users\USER\Desktop\PharmacyApp\obj\Debug\net9.0\PharmacyApp.pdb
 C:\Users\USER\Desktop\PharmacyApp\obj\Debug\net9.0\PharmacyApp.genruntimeconfig.cache
 C:\Users\USER\Desktop\PharmacyApp\obj\Debug\net9.0\ref\PharmacyApp.dll
+C:\Users\USER\Desktop\PharmacyApp\bin\Debug\net9.0\Serilog.dll
+C:\Users\USER\Desktop\PharmacyApp\bin\Debug\net9.0\Serilog.AspNetCore.dll
+C:\Users\USER\Desktop\PharmacyApp\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+C:\Users\USER\Desktop\PharmacyApp\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+C:\Users\USER\Desktop\PharmacyApp\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+C:\Users\USER\Desktop\PharmacyApp\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+C:\Users\USER\Desktop\PharmacyApp\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+C:\Users\USER\Desktop\PharmacyApp\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+C:\Users\USER\Desktop\PharmacyApp\bin\Debug\net9.0\Serilog.Sinks.File.dll
