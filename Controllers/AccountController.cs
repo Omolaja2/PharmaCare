@@ -19,7 +19,6 @@ public class AccountController : Controller
         _emailService = emailService;
         _logger = logger;
     }
-
     public IActionResult Register() => View();
 
     [HttpPost]
@@ -27,7 +26,6 @@ public class AccountController : Controller
     public async Task<IActionResult> Register(User user)
     {
         _logger.LogInformation("registering atempt for {Email}", user.Email);
-
         if (ModelState.IsValid)
         {
             var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
@@ -45,7 +43,6 @@ public class AccountController : Controller
             await _context.SaveChangesAsync();
 
             _logger.LogInformation("New user {FullName} registered with role {Role}", user.FullName, user.Role);
-
             try
             {
                 await _emailService.SendEmailAsync(user.Email,
@@ -66,7 +63,6 @@ public class AccountController : Controller
     }
 
     public IActionResult Login() => View();
-
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(string email, string password)
