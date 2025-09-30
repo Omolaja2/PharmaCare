@@ -10,7 +10,6 @@ public class PharmacyController : Controller
         _context = context;
     }
 
-    // Search page (already linked from dashboard)
     public IActionResult Search()
     {
         return View();
